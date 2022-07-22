@@ -12,7 +12,7 @@
 </head>
 <body>
     <!-- Header start -->
-    <header class="py-7 bg-white shadow-md">
+    <header class="py-5 bg-white shadow-md">
         <div class="container flex items-center justify-between">
             <!-- logo -->
             <a href="#">
@@ -28,7 +28,7 @@
                     <span class="absolute left-4 top-3 text-lg text-gray-500">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </span>
-                    <input type="text" class="w-full border-2 border-primary-color border-r-0 pl-12 py-3 pr-3 font-medium italic focus:outline-none placeholder-gray-500" placeholder="Search here ...">
+                    <input type="text" class="w-full focus:border-gray-500 border-2 border-primary-color border-r-0 pl-12 py-3 pr-3 font-medium italic focus:outline-none placeholder-gray-500" placeholder="Search here ...">
                     <button class=" bg-primary-color rounded-r-md text-white px-8 hover:bg-transparent hover:text-primary-color">Search</button>
                 </div>
             </div>
@@ -54,16 +54,51 @@
     </header>
     <!-- Header end -->
 
+
     <!-- Navbar start -->
     <nav class="bg-gray-800">
         <div class="container flex items-center">
             <!-- all categories -->
-            <div class="flex items-center space-x-3 text-white py-5 px-8 bg-primary-color">
+            <div class="flex items-center space-x-3 text-white py-5 px-10 bg-primary-color relative group">
                 <i class="fa-solid fa-bars text-base"></i>
                 <span class="text-[17px] font-normal capitalize">All categories</span>
+                <div class="absolute -left-3 w-full top-full bg-white shadow-md rounded-bl-md rounded-br-md py-4 divide-y-[1px] divide-dashed divide-gray-300 opacity-0 group-hover:opacity-100 transition ease-linear duration-500 invisible group-hover:visible">
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-couch text-pink-400 text-lg w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Sofa</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-shoe-prints text-pink-400 text-xl w-6 transform -rotate-90"></i>
+                        <span class=" text-gray-600 text-[15px]">Shoes</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-person text-pink-400 text-2xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Men</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-person-dress text-pink-400 text-2xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Women</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-regular fa-lightbulb text-pink-400 text-xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Electronic</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-headphones text-pink-400 text-xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Headphones</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-tv text-pink-400 text-xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">TV</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-computer text-pink-400 text-2xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Computer</span>
+                    </a>
+                </div>
             </div>
             <!-- nav link -->
-            <div class="flex items-center justify-between flex-grow pl-14">
+            <div class="flex items-center justify-between flex-grow pl-12">
                 <div class="flex items-center space-x-7 capitalize text-[17px] font-normal">
                     <a href="#" class="text-gray-300 hover:underline hover:underline-offset-4 hover:text-white">Home</a>
                     <a href="#" class="text-gray-300 hover:underline hover:underline-offset-4 hover:text-white">Shop</a>
@@ -80,5 +115,19 @@
         </div>
     </nav>
     <!-- Navbar end -->
+
+    <!-- Banner start -->
+    <div class="bg-cover bg-no-repeat bg-center py-32" style="background-image: url('./public/images/banner-2.jpg');">
+        <div class="container">
+            <h2 class="text-[60px] leading-[4rem] tracking-tight w-3/5 font-semibold capitalize text-slate-800">Best Collection For Home Decoration</h2>
+            <p class="mt-4 text-base leading-7 w-3/5 text-slate-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vulputate rhoncus pellentesque
+            id integer neque, vel accumsan dolor diam</p>
+            <div class="mt-12">
+                <a href="#" class="btn--shopnow">Shop now</a>
+            </div>
+        </div>
+    </div>
+    <!-- Banner end -->
+
 </body>
 </html>

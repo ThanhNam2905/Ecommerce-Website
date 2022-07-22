@@ -21,5 +21,11 @@
 
 @layer components {
 
+    .btn--shopnow {
+        @apply 
+                py-4 px-7 border border-primary-color rounded-md bg-primary-color text-white uppercase font-semibold
+                hover:bg-transparent hover:text-primary-color
+                ;
+    }
 
 }
