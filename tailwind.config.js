@@ -19,15 +19,18 @@ module.exports = {
       padding: {
         DEFAULT: '1rem',
         sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '6rem',
+        lg: '2rem',
+        xl: '2rem',
+        '2xl': '3rem',
       }
     },
     extend: {
       fontFamily: {
-        poppins: "'Poppins', sans-seri",
-        lato: "'Lato', sans-serif"
+        roboto: "'Roboto', sans-serif;",
+        'roboto-mono': "'Roboto Mono', monospace;"
+      },
+      colors: {
+        'primary-color': '#FD3D57'
       }
     },
   },
