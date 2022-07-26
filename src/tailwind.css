@@ -24,8 +24,17 @@
     .btn--shopnow {
         @apply 
                 py-4 px-7 border border-primary-color rounded-md bg-primary-color text-white uppercase font-semibold
-                hover:bg-transparent hover:text-primary-color
-                ;
+                hover:bg-transparent hover:text-primary-color;
+    }
+
+    .heading__2 {
+        @apply  uppercase text-[28px] mb-6 font-roboto font-semibold text-gray-800;
+    }
+
+    .link__categories {
+        @apply  
+                absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center gap-x-0.5 text-white text-xl font-roboto-mono font-medium
+                group-hover:gap-x-3 group-hover:bg-opacity-20 group-hover:text-gray-800;
     }
 
 }
