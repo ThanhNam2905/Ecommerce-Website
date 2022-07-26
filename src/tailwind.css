@@ -26,6 +26,11 @@
                 py-4 px-7 border border-primary-color rounded-md bg-primary-color text-white uppercase font-semibold
                 hover:bg-transparent hover:text-primary-color;
     }
+    .btn--addCart {
+        @apply 
+                w-full pt-2 pb-1.5 mt-2 flex items-center text-base justify-center gap-x-3 border border-primary-color rounded bg-primary-color text-white uppercase font-medium
+                hover:bg-transparent hover:text-primary-color;
+    }
 
     .heading__2 {
         @apply  uppercase text-[28px] mb-6 font-roboto font-semibold text-gray-800;
