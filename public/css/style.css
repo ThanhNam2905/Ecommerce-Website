@@ -630,6 +630,45 @@ h1, h2, h3, h4, h5, h6 {
   color: rgb(253 61 87 / var(--tw-text-opacity));
 }
 
+.heading__2 {
+  margin-bottom: 1.5rem;
+  font-family: 'Roboto', sans-serif;;
+  font-size: 28px;
+  font-weight: 600;
+  text-transform: uppercase;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.link__categories {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 0.125rem;
+       column-gap: 0.125rem;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  --tw-bg-opacity: 0.5;
+  font-family: 'Roboto Mono', monospace;;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.group:hover .link__categories {
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
+  --tw-bg-opacity: 0.2;
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
 .invisible {
   visibility: hidden;
 }
@@ -687,16 +726,20 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 3rem;
 }
 
+.mt-14 {
+  margin-top: 3.5rem;
+}
+
 .mb-5 {
   margin-bottom: 1.25rem;
 }
 
-.mt-16 {
-  margin-top: 4rem;
+.ml-0\.5 {
+  margin-left: 0.125rem;
 }
 
-.mt-14 {
-  margin-top: 3.5rem;
+.ml-0 {
+  margin-left: 0px;
 }
 
 .flex {
@@ -796,6 +839,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: 1.5rem;
 }
 
+.gap-3 {
+  gap: 0.75rem;
+}
+
 .gap-x-5 {
   -moz-column-gap: 1.25rem;
        column-gap: 1.25rem;
@@ -855,6 +902,10 @@ h1, h2, h3, h4, h5, h6 {
 .divide-gray-300 > :not([hidden]) ~ :not([hidden]) {
   --tw-divide-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-divide-opacity));
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .whitespace-nowrap {
@@ -955,10 +1006,6 @@ h1, h2, h3, h4, h5, h6 {
      object-fit: cover;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
@@ -1004,6 +1051,11 @@ h1, h2, h3, h4, h5, h6 {
   padding-right: 2.25rem;
 }
 
+.py-6 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
 .py-2\.5 {
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
@@ -1019,17 +1071,16 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0.5rem;
 }
 
-.py-6 {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-}
-
 .pl-12 {
   padding-left: 3rem;
 }
 
 .pr-3 {
   padding-right: 0.75rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
 }
 
 .text-center {
@@ -1107,10 +1158,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .font-semibold {
   font-weight: 600;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 .capitalize {
