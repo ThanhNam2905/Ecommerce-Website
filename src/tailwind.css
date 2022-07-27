@@ -22,13 +22,16 @@
 @layer components {
 
     .btn--shopnow {
-        @apply 
-                py-4 px-7 border border-primary-color rounded-md bg-primary-color text-white uppercase font-semibold
+        @apply  py-4 px-7 border border-primary-color rounded-md bg-primary-color text-white uppercase font-semibold
                 hover:bg-transparent hover:text-primary-color;
     }
     .btn--addCart {
-        @apply 
-                w-full pt-2 pb-1.5 mt-2 flex items-center text-base justify-center gap-x-3 border border-primary-color rounded bg-primary-color text-white uppercase font-medium
+        @apply  w-full pt-2 pb-1.5 mt-2 flex items-center text-base justify-center gap-x-3 border border-primary-color rounded bg-primary-color text-white uppercase font-medium
+                hover:bg-transparent hover:text-primary-color;
+    }
+
+    .btn--subscribe {
+        @apply  px-2.5 py-2 text-[15.5px] border border-primary-color rounded-tr rounded-br bg-primary-color text-white uppercase font-medium
                 hover:bg-transparent hover:text-primary-color;
     }
 
@@ -36,9 +39,12 @@
         @apply  uppercase text-[28px] mb-6 font-roboto font-semibold text-gray-800;
     }
 
+    .heading__6 {
+        @apply  uppercase text-[#2B2D42] font-semibold font-roboto text-lg;
+    }
+
     .link__categories {
-        @apply  
-                absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center gap-x-0.5 text-white text-xl font-roboto-mono font-medium
+        @apply  absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center gap-x-0.5 text-white text-xl font-roboto-mono font-medium
                 group-hover:gap-x-3 group-hover:bg-opacity-20 group-hover:text-gray-800;
     }
 
