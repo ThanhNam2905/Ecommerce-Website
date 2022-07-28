@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    
+    <link rel="shortcut icon" href="./public/images/favicon-tailwindcss.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <!-- Header start -->
+    <header class="py-5 bg-white shadow-md">
+        <div class="container flex items-center justify-between">
+            <!-- logo -->
+            <a href="#">
+                <img src="./public/images/logo.svg" alt="Logo Website" class="w-32 object-cover">
+            </a>
+            <!-- search bar -->
+            <div class="flex items-center w-full max-w-2xl">
+                <div class="whitespace-nowrap cursor-pointer border-2 border-primary-color border-r-0 rounded-l-md py-3 px-5 flex items-center space-x-3">
+                    <span class="font-normal italic">All Category</span>
+                    <i class="fa-solid fa-chevron-down text-sm mt-1 text-gray-500"></i>
+                </div>
+                <div class="relative w-full flex">
+                    <span class="absolute left-4 top-3 text-lg text-gray-500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" class="w-full focus:border-gray-500 border-2 border-primary-color border-r-0 pl-12 py-3 pr-3 font-medium italic focus:outline-none placeholder-gray-500" placeholder="Search here ...">
+                    <button class=" bg-primary-color rounded-r-md text-white px-8 hover:bg-transparent hover:text-primary-color">Search</button>
+                </div>
+            </div>
+            
+            <!-- icons -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-center relative hover:text-primary-color">
+                    <i class="fa-regular fa-heart text-[26px]"></i>
+                    <div class="text-[14px] font-semibold font-roboto-mono leading-6">Whist list</div>
+                    <span class="absolute -top-2 right-4 w-5 h-5 rounded-full text-[13px] flex items-center justify-center bg-primary-color text-white">6</span>
+                </a>
+                <a href="#" class="text-center relative hover:text-primary-color">
+                    <i class="fa-solid fa-basket-shopping text-[26px]"></i>
+                    <div class="text-[14px] font-semibold font-roboto-mono leading-6">Cart</div>
+                    <span class="absolute -top-2 -right-2 w-5 h-5 rounded-full text-[13px] flex items-center justify-center bg-primary-color text-white">4</span>
+                </a>
+                <a href="#" class="text-center relative hover:text-primary-color">
+                    <i class="fa-regular fa-user text-[26px]"></i>
+                    <div class="text-[14px] font-semibold font-roboto-mono leading-6">Account</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Navbar start -->
+    <nav class="bg-gray-800">
+        <div class="container flex items-center">
+            <!-- all categories -->
+            <div class="flex items-center space-x-3 text-white py-5 px-10 bg-primary-color relative group">
+                <i class="fa-solid fa-bars text-base"></i>
+                <span class="text-[17px] font-normal capitalize">All categories</span>
+                <div class="absolute -left-3 w-full top-full bg-white shadow-md rounded-bl-md rounded-br-md py-4 divide-y-[1px] divide-dashed divide-gray-300 opacity-0 group-hover:opacity-100 transition ease-linear duration-500 invisible group-hover:visible">
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-couch text-pink-400 text-lg w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Sofa</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-shoe-prints text-pink-400 text-xl w-6 transform -rotate-90"></i>
+                        <span class=" text-gray-600 text-[15px]">Shoes</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-person text-pink-400 text-2xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Men</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-person-dress text-pink-400 text-2xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Women</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-regular fa-lightbulb text-pink-400 text-xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Electronic</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-headphones text-pink-400 text-xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Headphones</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-tv text-pink-400 text-xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">TV</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-computer text-pink-400 text-2xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Computer</span>
+                    </a>
+                </div>
+            </div>
+            <!-- nav link -->
+            <div class="flex items-center justify-between flex-grow pl-12">
+                <div class="flex items-center space-x-7 capitalize text-[17px] font-normal">
+                    <a href="index.html" class="text-gray-300 hover:underline hover:underline-offset-4 hover:text-white">Home</a>
+                    <a href="shop.html" class="text-gray-300 hover:underline hover:underline-offset-4 hover:text-white">Shop</a>
+                    <a href="#" class="text-gray-300 hover:underline hover:underline-offset-4 hover:text-white">Page</a>
+                    <a href="#" class="text-gray-300 hover:underline hover:underline-offset-4 hover:text-white">Contact us</a>
+                </div>
+            </div>
+            <!-- login / register -->
+            <div class="flex items-center space-x-1.5 text-[17px] font-normal text-gray-200">
+                <a href="#" class="hover:text-primary-color">Login</a>
+                <span>/</span>
+                <a href="#" class="hover:text-primary-color">Register</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Breadcrums start -->
+    <div class="container py-6 flex items-end justify-start gap-x-3">
+        <a href="index.html"><i class="fa-solid fa-house text-primary-color text-base mb-0.5"></i></a>
+        <span>
+            <i class="fa-solid fa-angle-right text-[13px] text-gray-400"></i>
+        </span>
+        <p class="text-gray-600 font-medium text-base">Login</p>
+    </div>
+    <!-- Breadcrums end -->
+
+    <!-- Login wrapper start -->
+    <main>
+        <div class="container pb-16 mt-2">
+            <div class="max-w-lg mx-auto rounded-md shadow-lg px-7 pt-6 pb-10 border-t-2">
+                <h2 class="heading__2 mb-0.5">Login</h2>
+                <p class="text-[15px] text-gray-800 tracking-wider mb-6">Login if you a a returing customer.</p>
+                <!-- Form Login -->
+                <form action="" class="form__login">
+                    <div class="space-y-2 mb-3 ">
+                        <label for="email" class="text-base font-medium capitalize">
+                            Email address 
+                            <span class="text-primary-color text-[20px] inline-block">*</span>
+                        </label>
+                        <input type="email" name="" id="email" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-500 focus:outline-none focus:border-primary-color focus:ring-primary-color" placeholder="example@gmail.com">
+                    </div>
+                    <div class="space-y-2 mb-3 ">
+                        <label for="password" class="text-base font-medium capitalize">
+                            password 
+                            <span class="text-primary-color text-[20px] inline-block">*</span>
+                        </label>
+                        <input type="password" name="" id="password" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-500 focus:outline-none focus:border-primary-color focus:ring-primary-color" placeholder="your password">
+                    </div>
+                    <div class="flex items-center justify-between mt-6">
+                        <div class="flex items-center gap-x-3">
+                            <input type="checkbox" name="" id="remember-me" class="w-[19px] h-[18px] cursor-pointer rounded border-[3px] border-primary-color focus:ring-0 checked:text-primary-color">
+                            <label for="remember-me" class="text-base cursor-pointer capitalize">Remember me</label>
+                        </div>
+                        <a href="#" class="text-primary-color text-base hover:underline hover:underline-offset-2">Forgot Password?</a>
+                    </div>
+                    <div class="mt-6">
+                        <button class="btn--addCart py-2.5">Login</button>
+                    </div>
+                </form>
+                <!-- login with facebook, google -->
+                <div class="mt-5 flex justify-center relative">
+                    <p class="uppercase text-base text-gray-800 px-2.5 bg-white relative z-20">OR LOGIN IN WITH</p>
+                    <div class="w-full absolute top-1/2 h-[1.5px] bg-gray-300"></div>
+                </div>
+                <div class="flex gap-x-4 mt-5">
+                    <button class="btn--addCart bg-[#3B5999] border-[#3B5999] capitalize hover:text-[#3B5999] py-[8px]">
+                        <i class="fa-brands fa-facebook text-lg"></i>Facebook
+                    </button>
+                    <button class="btn--addCart bg-[#D85040] border-[#D85040] capitalize hover:text-[#D85040] py-[8px]">
+                        <i class="fa-brands fa-google text-lg"></i>Google
+                    </button>
+                </div>
+                <div class="mt-5 text-center text-base">
+                    Don't have an account.? 
+                    <a href="register.html" class="text-primary-color italic hover:underline hover:underline-offset-2">Register Now</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Login wrapper end -->
+
+    <!-- Footer start -->
+    <footer>
+        <div class="bg-gray-50">
+            <div class="container py-16">
+                <div class="flex gap-x-10 w-full">
+                    <div class="flex-1 w-[33%] text-[#2B2D42]">
+                        <img src="./public/images/logo.svg" alt="Logo Website">
+                        <p class="text-[15px] leading-6 my-4 font-roboto">Lorem ipsum, or lipsum as it is sometimes kno wn, is dummy text used in laying out print, gra phic or web designs the passage.</p>
+                        <h5 class="uppercase text-lg font-roboto font-semibold">Newsletter</h5>
+                        <form method="post" class="flex items-center w-full mt-4">
+                            <input type="email" class="w-3/4 text-[13px] font-medium bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-color px-4 py-2.5 border border-gray-400 border-r-0 rounded-tl rounded-bl" name="" id="" placeholder="Your email address">
+                            <button class="btn--subscribe">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="flex-none w-[17%] ">
+                        <h6 class="heading__6">My Account</h6>
+                        <ul class="mt-4 text-[#2B2D42] text-[15px]">
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Orders</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Wishlist</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Track Order</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Manager Account</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Return Order</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-none w-[17%] ">
+                        <h6 class="heading__6">INFORMATION</h6>
+                        <ul class="mt-4 text-[#2B2D42] text-[15px]">
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">About Us</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Return Policy</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Terms & condition</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Privacy Policy</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-1 w-[33%]">
+                        <h6 class="heading__6 mb-3">Contact</h6>
+                        <div class="address flex items-start gap-x-4 text-[#2B2D42] mb-2.5">
+                            <i class="fa-solid fa-location-dot text-[15px] mt-1.5"></i>
+                            <p class="text-[15px] font-roboto-mono italic">7895 Dr New Albuquerue, NM 19800,United States Of America</p>
+                        </div>
+                        <div class="phone flex items-start gap-x-4 text-[#2B2D42] mb-2.5">
+                            <i class="fa-solid fa-phone text-[15px] mt-1.5"></i>
+                            <a href="tel:+0942898298" class="text-[15px] font-roboto-mono italic hover:text-primary-color hover:underline hover:underline-offset-4">+ 094.2898.298</a>,
+                            <a href="tel:+0942898298" class="text-[15px] font-roboto-mono italic hover:text-primary-color hover:underline hover:underline-offset-4">+566 254 575</a>
+                        </div>
+                        <div class="mail flex items-start gap-x-4 text-[#2B2D42] mb-2.5">
+                            <i class="fa-solid fa-envelope text-[15px] mt-1.5"></i>
+                            <a href="mailto:thanhnam290596@gmail.com" class="text-[15px] font-roboto-mono italic hover:text-primary-color hover:underline hover:underline-offset-4">thanhnam290596@gmail.com</a>
+                        </div>
+                        <div class="socials-link flex space-x-3 mt-6">
+                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f flex items-center justify-center w-9 h-9 rounded-full bg-[#3B5998] text-white text-base"></i></a>
+                            <a href="#" title="Twitter"><i class="fa-brands fa-twitter flex items-center justify-center w-9 h-9 rounded-full bg-[#00ACEE] text-white text-base"></i></a>
+                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram flex items-center justify-center w-9 h-9 rounded-full bg-[#D53982] text-white text-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-slate-800">
+            <div class="container py-4">
+                <div class="grid grid-cols-2">
+                    <div class="flex items-center">
+                        <p class="text-[16px] text-white">© RAFCART - All Rights Reserved</p>
+                    </div>
+                    <div>
+                        <img src="./public/images/products/payment-method.png" class="w-[333px] float-right h-7 object-contain" alt="Image payment-method">
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- link src main.js  -->
+    <script src="./public/js/main.js" type="text/javascript"></script>
+</body>
+</html>
