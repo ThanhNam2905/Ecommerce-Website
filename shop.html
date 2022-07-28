@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Page</title>
+    
+    <link rel="shortcut icon" href="./public/images/favicon-tailwindcss.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./public/css/style.css">
+</head>
+<body>
+    <!-- Header start -->
+    <header class="py-5 bg-white shadow-md">
+        <div class="container flex items-center justify-between">
+            <!-- logo -->
+            <a href="#">
+                <img src="./public/images/logo.svg" alt="Logo Website" class="w-32 object-cover">
+            </a>
+            <!-- search bar -->
+            <div class="flex items-center w-full max-w-2xl">
+                <div class="whitespace-nowrap cursor-pointer border-2 border-primary-color border-r-0 rounded-l-md py-3 px-5 flex items-center space-x-3">
+                    <span class="font-normal italic">All Category</span>
+                    <i class="fa-solid fa-chevron-down text-sm mt-1 text-gray-500"></i>
+                </div>
+                <div class="relative w-full flex">
+                    <span class="absolute left-4 top-3 text-lg text-gray-500">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" class="w-full focus:border-gray-500 border-2 border-primary-color border-r-0 pl-12 py-3 pr-3 font-medium italic focus:outline-none placeholder-gray-500" placeholder="Search here ...">
+                    <button class=" bg-primary-color rounded-r-md text-white px-8 hover:bg-transparent hover:text-primary-color">Search</button>
+                </div>
+            </div>
+            
+            <!-- icons -->
+            <div class="flex items-center space-x-4">
+                <a href="#" class="text-center relative hover:text-primary-color">
+                    <i class="fa-regular fa-heart text-[26px]"></i>
+                    <div class="text-[14px] font-semibold font-roboto-mono leading-6">Whist list</div>
+                    <span class="absolute -top-2 right-4 w-5 h-5 rounded-full text-[13px] flex items-center justify-center bg-primary-color text-white">6</span>
+                </a>
+                <a href="#" class="text-center relative hover:text-primary-color">
+                    <i class="fa-solid fa-basket-shopping text-[26px]"></i>
+                    <div class="text-[14px] font-semibold font-roboto-mono leading-6">Cart</div>
+                    <span class="absolute -top-2 -right-2 w-5 h-5 rounded-full text-[13px] flex items-center justify-center bg-primary-color text-white">4</span>
+                </a>
+                <a href="#" class="text-center relative hover:text-primary-color">
+                    <i class="fa-regular fa-user text-[26px]"></i>
+                    <div class="text-[14px] font-semibold font-roboto-mono leading-6">Account</div>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Navbar start -->
+    <nav class="bg-gray-800">
+        <div class="container flex items-center">
+            <!-- all categories -->
+            <div class="flex items-center space-x-3 text-white py-5 px-10 bg-primary-color relative group">
+                <i class="fa-solid fa-bars text-base"></i>
+                <span class="text-[17px] font-normal capitalize">All categories</span>
+                <div class="absolute -left-3 w-full top-full bg-white shadow-md rounded-bl-md rounded-br-md py-4 divide-y-[1px] divide-dashed divide-gray-300 opacity-0 group-hover:opacity-100 transition ease-linear duration-500 invisible group-hover:visible">
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-couch text-pink-400 text-lg w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Sofa</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-shoe-prints text-pink-400 text-xl w-6 transform -rotate-90"></i>
+                        <span class=" text-gray-600 text-[15px]">Shoes</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-person text-pink-400 text-2xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Men</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-person-dress text-pink-400 text-2xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Women</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-regular fa-lightbulb text-pink-400 text-xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Electronic</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-headphones text-pink-400 text-xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Headphones</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-tv text-pink-400 text-xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">TV</span>
+                    </a>
+                    <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
+                        <i class="fa-solid fa-computer text-pink-400 text-2xl w-6"></i>
+                        <span class=" text-gray-600 text-[15px]">Computer</span>
+                    </a>
+                </div>
+            </div>
+            <!-- nav link -->
+            <div class="flex items-center justify-between flex-grow pl-12">
+                <div class="flex items-center space-x-7 capitalize text-[17px] font-normal">
+                    <a href="index.html" class="text-gray-300 hover:underline hover:underline-offset-4 hover:text-white">Home</a>
+                    <a href="shop.html" class="text-gray-300 hover:underline hover:underline-offset-4 hover:text-white">Shop</a>
+                    <a href="#" class="text-gray-300 hover:underline hover:underline-offset-4 hover:text-white">Page</a>
+                    <a href="#" class="text-gray-300 hover:underline hover:underline-offset-4 hover:text-white">Contact us</a>
+                </div>
+            </div>
+            <!-- login / register -->
+            <div class="flex items-center space-x-1.5 text-[17px] font-normal text-gray-200">
+                <a href="#" class="hover:text-primary-color">Login</a>
+                <span>/</span>
+                <a href="#" class="hover:text-primary-color">Register</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Breadcrums start -->
+    <div class="container py-6 flex items-end justify-start gap-x-3">
+        <a href="index.html"><i class="fa-solid fa-house text-primary-color text-base mb-0.5"></i></a>
+        <span>
+            <i class="fa-solid fa-angle-right text-[13px] text-gray-500"></i>
+        </span>
+        <p class="text-gray-600 font-medium">Shop</p>
+    </div>
+    <!-- Breadcrums end -->
+
+    <!-- Shop wrapper start -->
+    <main class="pb-14">
+        <div class="container grid grid-cols-4 gap-x-5 items-start pt-5">
+            <!-- sidebar -->
+            <div class="col-span-1 bg-white px-4 pt-1 pb-5 shadow-lg rounded overflow-hidden">
+                <div class="divide-y-2 divide-gray-300 space-y-5">
+                    <div>
+                        <h3 class="heading__3">CATEGORIES</h3>
+                        <div class="space-y-2.5">
+                            <div class="flex items-center">
+                                <input type="checkbox" name="" id="category-1" checked class="text-primary-color focus:ring-0 rounded-sm cursor-pointer">
+                                <label for="category-1" class="ml-2 cursor-pointer text-gray-600">Bedroom</label>
+                                <p class="ml-auto">(16)</p>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" name="" id="category-2" class="text-primary-color focus:ring-0 rounded-sm cursor-pointer">
+                                <label for="category-2" class="ml-2 cursor-pointer text-gray-600">Sofa</label>
+                                <p class="ml-auto">(11)</p>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" name="" id="category-3" class="text-primary-color focus:ring-0 rounded-sm cursor-pointer">
+                                <label for="category-3" class="ml-2 cursor-pointer text-gray-600">Men</label>
+                                <p class="ml-auto">(25)</p>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" name="" id="category-4" class="text-primary-color focus:ring-0 rounded-sm cursor-pointer">
+                                <label for="category-4" class="ml-2 cursor-pointer text-gray-600">Women</label>
+                                <p class="ml-auto">(23)</p>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" name="" id="category-5" class="text-primary-color focus:ring-0 rounded-sm cursor-pointer">
+                                <label for="category-5" class="ml-2 cursor-pointer text-gray-600">Chair</label>
+                                <p class="ml-auto">(13)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="heading__3">brands</h3>
+                        <div class="space-y-2.5">
+                            <div class="flex items-center">
+                                <input type="checkbox" name="" id="category-5" checked class="text-primary-color focus:ring-0 rounded-sm cursor-pointer">
+                                <label for="category-5" class="ml-2 cursor-pointer text-gray-600">Adidas</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" name="" id="category-6" class="text-primary-color focus:ring-0 rounded-sm cursor-pointer">
+                                <label for="category-6" class="ml-2 cursor-pointer text-gray-600">Nike</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" name="" id="category-7" class="text-primary-color focus:ring-0 rounded-sm cursor-pointer">
+                                <label for="category-7" class="ml-2 cursor-pointer text-gray-600">Puma</label>
+                            </div>
+                            <div class="flex items-center">
+                                <input type="checkbox" name="" id="category-8" class="text-primary-color focus:ring-0 rounded-sm cursor-pointer">
+                                <label for="category-8" class="ml-2 cursor-pointer text-gray-600">MLB</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="heading__3">Price</h3>
+                        <div class="flex items-center">
+                            <input type="number" class="w-full border-2 border-gray-400 rounded shadow-md text-gray-600 text-sm focus:ring-0 focus:border-primary-color" placeholder="min">
+                            <span class="mx-3 text-gray-700">-</span>
+                            <input type="number" class="w-full border-2 border-gray-400 rounded shadow-md text-gray-600 text-sm focus:ring-0 focus:border-primary-color" placeholder="max">
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="heading__3">Size</h3>
+                        <div class="flex items-center gap-2.5">
+                            <div class="size-selector">
+                                <input type="radio" name="size" id="size-s" class="hidden">
+                                <label for="size-s" class="w-6 h-6 rounded-sm border border-gray-300 cursor-pointer flex items-center justify-center text-[13px] text-gray-600 font-medium uppercase">S</label>
+                            </div>
+                            <div class="size-selector">
+                                <input type="radio" name="size" id="size-m" class="hidden">
+                                <label for="size-m" class="w-6 h-6 rounded-sm border border-gray-300 cursor-pointer flex items-center justify-center text-[13px] text-gray-600 font-medium uppercase">M</label>
+                            </div>
+                            <div class="size-selector">
+                                <input type="radio" name="size" id="size-l" class="hidden">
+                                <label for="size-l" class="w-6 h-6 rounded-sm border border-gray-300 cursor-pointer flex items-center justify-center text-[13px] text-gray-600 font-medium uppercase">L</label>
+                            </div>
+                            <div class="size-selector">
+                                <input type="radio" name="size" id="size-xl" class="hidden">
+                                <label for="size-xl" class="w-6 h-6 rounded-sm border border-gray-300 cursor-pointer flex items-center justify-center text-[13px] text-gray-600 font-medium uppercase">XL</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="heading__3">Color</h3>
+                        <div class="flex items-center gap-2.5">
+                            <div class="color-selector">
+                                <input type="radio" name="color" id="color-red" class="hidden">
+                                <label for="color-red" class="block w-6 h-6 rounded-sm cursor-pointer border border-primary-color bg-primary-color"></label>
+                            </div>
+                            <div class="color-selector">
+                                <input type="radio" name="color" id="color-white" class="hidden">
+                                <label for="color-white" class="block w-6 h-6 rounded-sm cursor-pointer border border-gray-300 bg-white"></label>
+                            </div>
+                            <div class="color-selector">
+                                <input type="radio" name="color" id="color-black" class="hidden">
+                                <label for="color-black" class="block w-6 h-6 rounded-sm cursor-pointer border border-black bg-black"></label>
+                            </div>
+                            <div class="color-selector">
+                                <input type="radio" name="color" id="color-blue" class="hidden">
+                                <label for="color-blue" class="block w-6 h-6 rounded-sm cursor-pointer border border-blue-700 bg-blue-700"></label>
+                            </div>
+                            <div class="color-selector">
+                                <input type="radio" name="color" id="color-yellow" class="hidden">
+                                <label for="color-yellow" class="block w-6 h-6 rounded-sm cursor-pointer border border-yellow-400 bg-yellow-400"></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-3">
+                <!-- sorting -->
+                <div class="flex items-center justify-between mb-5">
+                    <!-- sorting product -->
+                    <select name="sorting" id="sorting" class="w-60 px-5 py-3 appearance-none border border-gray-300 text-sm text-gray-600 shadow-md rounded-md focus:ring-1 focus:ring-primary-color  focus:outline-none focus:border-primary-color">
+                        <option value="default-sorting"><p class="block px-3 py-3">Default sorting</p></option>
+                        <option value="price-low-high">Price low-high</option>
+                        <option value="price-high-low">Price high-low</option>
+                        <option value="latest-products">Latest products</option>
+                    </select>
+                    <!-- sorting column -->
+                    <div class="flex items-center gap-2">
+                        <div class="border border-primary-color w-10 h-9 rounded flex items-center justify-center bg-primary-color text-white cursor-pointer">
+                            <i class="fas fa-th text-lg"></i>
+                        </div>
+                        <div class="border-[1.5px] border-gray-400 w-10 h-9 rounded flex items-center justify-center bg-transparent text-gray-800 cursor-pointer">
+                            <i class="fa-solid fa-list-ul text-lg"></i>
+                        </div>
+                    </div>
+                </div>
+                <!-- products list -->
+                <div class="grid grid-cols-3 gap-6">
+                    <div class="rounded bg-white shadow-lg overflow-hidden group">
+                        <div class="images relative overflow-hidden">
+                            <div class="absolute z-20 top-4 left-4 bg-yellow-500 text-white py-1 px-2 rounded text-[15px]">50%</div>
+                            <div class="absolute z-20 top-4 right-4 bg-white text-primary-color w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
+                                <i class="fa-regular fa-heart text-xl"></i>
+                            </div>
+                            <div class="absolute z-20 cursor-pointer -bottom-[20%] left-0 right-0 bg-black bg-opacity-70 text-center text-white capitalize text-base py-2 group-hover:bottom-0">
+                                <i class="fa-regular fa-eye text-[15px] mr-1"></i>
+                                Quick view
+                            </div>
+                            <div class="overview-shape absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40"></div>
+                            <img src="./public/images/products/product2.jpg" class="w-full h-full object-contain" alt="product2">
+                        </div>
+                        <div class="info p-4">
+                            <a href="product-view.html" class="uppercase text-lg leading-6 font-semibold text-gray-800 font-roboto hover:text-primary-color">PELAGIA Lounge</a>
+                            <p class="text-[15px] text-[#464545] my-2">Outdoor Modular Lounge</p>
+                            <p class="text-primary-color font-bold text-xl">$499.00</p>
+                            <div class="rating mt-1.5 text-yellow-500 text-[15px] space-x-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class=" text-[#464545] text-lg italic font-roboto-mono inline-block pl-2">(150)</span>
+                            </div>
+                        </div>
+                        <button class="btn--addCart rounded-tr-none rounded-tl-none">
+                            <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="rounded bg-white shadow-lg overflow-hidden group">
+                        <div class="images relative overflow-hidden">
+                            <div class="absolute z-20 top-4 right-4 bg-white text-primary-color w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
+                                <i class="fa-regular fa-heart text-xl"></i>
+                            </div>
+                            <div class="absolute z-20 cursor-pointer -bottom-[20%] left-0 right-0 bg-black bg-opacity-70 text-center text-white capitalize text-base py-2 group-hover:bottom-0">
+                                <i class="fa-regular fa-eye text-[15px] mr-1"></i>
+                                Quick view
+                            </div>
+                            <div class="overview-shape absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40"></div>
+                            <img src="./public/images/products/product3.jpg" class="w-full h-full object-contain" alt="product3">
+                        </div>
+                        <div class="info p-4">
+                            <a href="product-view.html" class="uppercase text-lg leading-6 font-semibold text-gray-800 font-roboto hover:text-primary-color">AVERY bed</a>
+                            <p class="text-[15px] text-[#464545] my-2">Queen Bed</p>
+                            <p class="text-primary-color font-bold text-xl">$549.00</p>
+                            <div class="rating mt-1.5 text-yellow-500 text-[15px] space-x-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class=" text-[#464545] text-lg italic font-roboto-mono inline-block pl-2">(150)</span>
+                            </div>
+                        </div>
+                        <button class="btn--addCart rounded-tr-none rounded-tl-none">
+                            <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="rounded bg-white shadow-lg overflow-hidden group">
+                        <div class="images relative overflow-hidden">
+                            <div class="absolute z-20 top-4 right-4 bg-white text-primary-color w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
+                                <i class="fa-regular fa-heart text-xl"></i>
+                            </div>
+                            <div class="absolute z-20 cursor-pointer -bottom-[20%] left-0 right-0 bg-black bg-opacity-70 text-center text-white capitalize text-base py-2 group-hover:bottom-0">
+                                <i class="fa-regular fa-eye text-[15px] mr-1"></i>
+                                Quick view
+                            </div>
+                            <div class="overview-shape absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40"></div>
+                            <img src="./public/images/products/product4.jpg" class="w-full h-full object-contain" alt="product4">
+                        </div>
+                        <div class="info p-4">
+                            <a href="product-view.html" class="uppercase text-lg leading-6 font-semibold text-gray-800 font-roboto hover:text-primary-color">white bed</a>
+                            <p class="text-[15px] text-[#464545] my-2">King Bed</p>
+                            <p class="text-primary-color font-bold text-xl">$699.00</p>
+                            <div class="rating mt-1.5 text-yellow-500 text-[15px] space-x-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class=" text-[#464545] text-lg italic font-roboto-mono inline-block pl-2">(150)</span>
+                            </div>
+                        </div>
+                        <button class="btn--addCart rounded-tr-none rounded-tl-none">
+                            <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="rounded bg-white shadow-lg overflow-hidden group">
+                        <div class="images relative overflow-hidden">
+                            <div class="absolute z-20 top-4 left-4 bg-green-600 text-white py-1 px-2 rounded text-[15px]">25%</div>
+                            <div class="absolute z-20 top-4 right-4 bg-white text-primary-color w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
+                                <i class="fa-regular fa-heart text-xl"></i>
+                            </div>
+                            <div class="absolute z-20 cursor-pointer -bottom-[20%] left-0 right-0 bg-black bg-opacity-70 text-center text-white capitalize text-base py-2 group-hover:bottom-0">
+                                <i class="fa-regular fa-eye text-[15px] mr-1"></i>
+                                Quick view
+                            </div>
+                            <div class="overview-shape absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40"></div>
+                            <img src="./public/images/products/product9.jpg" class="w-full h-full object-contain" alt="product9">
+                        </div>
+                        <div class="info p-4">
+                            <a href="product-view.html" class="uppercase text-lg leading-6 font-semibold text-gray-800 font-roboto hover:text-primary-color">GUYER Chair</a>
+                            <p class="text-[15px] text-[#464545] my-2">Queen Headboard</p>
+                            <p class="text-primary-color font-bold text-xl">$45.00</p>
+                            <div class="rating mt-1.5 text-yellow-500 text-[15px] space-x-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class=" text-[#464545] text-lg italic font-roboto-mono inline-block pl-2">(150)</span>
+                            </div>
+                        </div>
+                        <button class="btn--addCart rounded-tr-none rounded-tl-none">
+                            <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="rounded bg-white shadow-lg overflow-hidden group">
+                        <div class="images relative overflow-hidden">
+                            <div class="absolute z-20 top-4 right-4 bg-white text-primary-color w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
+                                <i class="fa-regular fa-heart text-xl"></i>
+                            </div>
+                            <div class="absolute z-20 cursor-pointer -bottom-[20%] left-0 right-0 bg-black bg-opacity-70 text-center text-white capitalize text-base py-2 group-hover:bottom-0">
+                                <i class="fa-regular fa-eye text-[15px] mr-1"></i>
+                                Quick view
+                            </div>
+                            <div class="overview-shape absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40"></div>
+                            <img src="./public/images/products/product1.jpg" class="w-full h-full object-contain" alt="product1">
+                        </div>
+                        <div class="info p-4">
+                            <a href="product-view.html" class="uppercase text-lg leading-6 font-semibold text-gray-800 font-roboto hover:text-primary-color">MADELINE sofa</a>
+                            <p class="text-[15px] text-[#464545] my-2">Fabric Sofa Bed</p>
+                            <p class="text-primary-color font-bold text-xl">$120.00</p>
+                            <div class="rating mt-1.5 text-yellow-500 text-[15px] space-x-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class=" text-[#464545] text-lg italic font-roboto-mono inline-block pl-2">(150)</span>
+                            </div>
+                        </div>
+                        <button class="btn--addCart rounded-tr-none rounded-tl-none">
+                            <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="rounded bg-white shadow-lg overflow-hidden group">
+                        <div class="images relative overflow-hidden">
+                            <div class="absolute z-20 top-4 left-4 bg-red-600 text-white py-1 px-2 rounded text-[14px]">HOT</div>
+                            <div class="absolute z-20 top-4 right-4 bg-white text-primary-color w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
+                                <i class="fa-regular fa-heart text-xl"></i>
+                            </div>
+                            <div class="absolute z-20 cursor-pointer -bottom-[20%] left-0 right-0 bg-black bg-opacity-70 text-center text-white capitalize text-base py-2 group-hover:bottom-0">
+                                <i class="fa-regular fa-eye text-[15px] mr-1"></i>
+                                Quick view
+                            </div>
+                            <div class="overview-shape absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40"></div>
+                            <img src="./public/images/products/product8.jpg" class="w-full h-full object-contain" alt="product8">
+                        </div>
+                        <div class="info p-4">
+                            <a href="product-view.html" class="uppercase text-lg leading-6 font-semibold text-gray-800 font-roboto hover:text-primary-color">BIANCO Chair</a>
+                            <p class="text-[15px] text-[#464545] my-2">Fabric Accent Chair</p>
+                            <p class="text-primary-color font-bold text-xl">$45.00</p>
+                            <div class="rating mt-1.5 text-yellow-500 text-[15px] space-x-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class=" text-[#464545] text-lg italic font-roboto-mono inline-block pl-2">(150)</span>
+                            </div>
+                        </div>
+                        <button class="btn--addCart rounded-tr-none rounded-tl-none">
+                            <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="rounded bg-white shadow-lg overflow-hidden group">
+                        <div class="images relative overflow-hidden">
+                            <div class="absolute z-20 top-4 right-4 bg-white text-primary-color w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
+                                <i class="fa-regular fa-heart text-xl"></i>
+                            </div>
+                            <div class="absolute z-20 cursor-pointer -bottom-[20%] left-0 right-0 bg-black bg-opacity-70 text-center text-white capitalize text-base py-2 group-hover:bottom-0">
+                                <i class="fa-regular fa-eye text-[15px] mr-1"></i>
+                                Quick view
+                            </div>
+                            <div class="overview-shape absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40"></div>
+                            <img src="./public/images/products/product10.jpg" class="w-full h-full object-contain" alt="product10">
+                        </div>
+                        <div class="info p-4">
+                            <a href="product-view.html" class="uppercase text-lg leading-6 font-semibold text-gray-800 font-roboto hover:text-primary-color">PELAGIA Lounge</a>
+                            <p class="text-[15px] text-[#464545] my-2">Outdoor Modular Lounge</p>
+                            <p class="text-primary-color font-bold text-xl">$59.00</p>
+                            <div class="rating mt-1.5 text-yellow-500 text-[15px] space-x-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class=" text-[#464545] text-lg italic font-roboto-mono inline-block pl-2">(150)</span>
+                            </div>
+                        </div>
+                        <button class="btn--addCart rounded-tr-none rounded-tl-none">
+                            <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="rounded bg-white shadow-lg overflow-hidden group">
+                        <div class="images relative overflow-hidden">
+                            <div class="absolute z-20 top-4 left-4 bg-yellow-500 text-white py-1 px-2 rounded text-[15px]">50%</div>
+                            <div class="absolute z-20 top-4 right-4 bg-white text-primary-color w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
+                                <i class="fa-regular fa-heart text-xl"></i>
+                            </div>
+                            <div class="absolute z-20 cursor-pointer -bottom-[20%] left-0 right-0 bg-black bg-opacity-70 text-center text-white capitalize text-base py-2 group-hover:bottom-0">
+                                <i class="fa-regular fa-eye text-[15px] mr-1"></i>
+                                Quick view
+                            </div>
+                            <div class="overview-shape absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40"></div>
+                            <img src="./public/images/products/product12.jpg" class="w-full h-full object-contain" alt="product12">
+                        </div>
+                        <div class="info p-4">
+                            <a href="product-view.html" class="uppercase text-lg leading-6 font-semibold text-gray-800 font-roboto hover:text-primary-color">Black ARCHIE</a>
+                            <p class="text-[15px] text-[#464545] my-2">Black Bedside</p>
+                            <p class="text-primary-color font-bold text-xl">$159.00</p>
+                            <div class="rating mt-1.5 text-yellow-500 text-[15px] space-x-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class=" text-[#464545] text-lg italic font-roboto-mono inline-block pl-2">(150)</span>
+                            </div>
+                        </div>
+                        <button class="btn--addCart rounded-tr-none rounded-tl-none">
+                            <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                    <div class="rounded bg-white shadow-lg overflow-hidden group">
+                        <div class="images relative overflow-hidden">
+                            <div class="absolute z-20 top-4 left-4 bg-yellow-500 text-white py-1 px-2 rounded text-[15px]">50%</div>
+                            <div class="absolute z-20 top-4 right-4 bg-white text-primary-color w-[36px] h-[36px] flex items-center justify-center rounded-full cursor-pointer">
+                                <i class="fa-regular fa-heart text-xl"></i>
+                            </div>
+                            <div class="absolute z-20 cursor-pointer -bottom-[20%] left-0 right-0 bg-black bg-opacity-70 text-center text-white capitalize text-base py-2 group-hover:bottom-0">
+                                <i class="fa-regular fa-eye text-[15px] mr-1"></i>
+                                Quick view
+                            </div>
+                            <div class="overview-shape absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40"></div>
+                            <img src="./public/images/products/product6.jpg" class="w-full h-full object-contain" alt="product6">
+                        </div>
+                        <div class="info p-4">
+                            <a href="product-view.html" class="uppercase text-lg leading-6 font-semibold text-gray-800 font-roboto hover:text-primary-color">Black ARCHIE</a>
+                            <p class="text-[15px] text-[#464545] my-2">Black Bedside</p>
+                            <p class="text-primary-color font-bold text-xl">$159.00</p>
+                            <div class="rating mt-1.5 text-yellow-500 text-[15px] space-x-0.5">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class=" text-[#464545] text-lg italic font-roboto-mono inline-block pl-2">(150)</span>
+                            </div>
+                        </div>
+                        <button class="btn--addCart rounded-tr-none rounded-tl-none">
+                            <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                            Add to cart
+                        </button>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <ul class="flex items-center justify-center gap-x-3 mt-7">
+                    <li>
+                        <a href="#" class="pagination__link bg-primary-color text-white">1</a>
+                    </li>
+                    <li>
+                        <a href="#" class="pagination__link border-gray-300">2</a>
+                    </li>
+                    <li>
+                        <a href="#" class="pagination__link border-gray-300">3</a>
+                    </li>
+                    <li>
+                        <a href="#" class="pagination__link border-gray-300">4</a>
+                    </li>
+                    <li>
+                        <a href="#" class="pagination__link border-gray-300">5</a>
+                    </li>
+                    <li>
+                        <a href="#" class="pagination__link border-gray-300 group"><i class="fa-solid fa-arrow-right-long text-[13px] group-hover:text-white"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    <!-- Shop wrapper end -->
+
+    <!-- Footer start -->
+    <footer>
+        <div class="bg-gray-50">
+            <div class="container py-16">
+                <div class="flex gap-x-10 w-full">
+                    <div class="flex-1 w-[33%] text-[#2B2D42]">
+                        <img src="./public/images/logo.svg" alt="Logo Website">
+                        <p class="text-[15px] leading-6 my-4 font-roboto">Lorem ipsum, or lipsum as it is sometimes kno wn, is dummy text used in laying out print, gra phic or web designs the passage.</p>
+                        <h5 class="uppercase text-lg font-roboto font-semibold">Newsletter</h5>
+                        <form method="post" class="flex items-center w-full mt-4">
+                            <input type="email" class="w-3/4 text-[13px] font-medium bg-transparent focus:outline-none focus:ring-1 focus:ring-primary-color px-4 py-2.5 border border-gray-400 border-r-0 rounded-tl rounded-bl" name="" id="" placeholder="Your email address">
+                            <button class="btn--subscribe">Subscribe</button>
+                        </form>
+                    </div>
+                    <div class="flex-none w-[17%] ">
+                        <h6 class="heading__6">My Account</h6>
+                        <ul class="mt-4 text-[#2B2D42] text-[15px]">
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Orders</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Wishlist</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Track Order</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Manager Account</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Return Order</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-none w-[17%] ">
+                        <h6 class="heading__6">INFORMATION</h6>
+                        <ul class="mt-4 text-[#2B2D42] text-[15px]">
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">About Us</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Return Policy</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Terms & condition</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">Privacy Policy</a>
+                            </li>
+                            <li class="mb-2.5">
+                                <a href="#" class=" hover:text-primary-color hover:underline hover:underline-offset-[3px]">FAQ</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex-1 w-[33%]">
+                        <h6 class="heading__6 mb-3">Contact</h6>
+                        <div class="address flex items-start gap-x-4 text-[#2B2D42] mb-2.5">
+                            <i class="fa-solid fa-location-dot text-[15px] mt-1.5"></i>
+                            <p class="text-[15px] font-roboto-mono italic">7895 Dr New Albuquerue, NM 19800,United States Of America</p>
+                        </div>
+                        <div class="phone flex items-start gap-x-4 text-[#2B2D42] mb-2.5">
+                            <i class="fa-solid fa-phone text-[15px] mt-1.5"></i>
+                            <a href="tel:+0942898298" class="text-[15px] font-roboto-mono italic hover:text-primary-color hover:underline hover:underline-offset-4">+ 094.2898.298</a>,
+                            <a href="tel:+0942898298" class="text-[15px] font-roboto-mono italic hover:text-primary-color hover:underline hover:underline-offset-4">+566 254 575</a>
+                        </div>
+                        <div class="mail flex items-start gap-x-4 text-[#2B2D42] mb-2.5">
+                            <i class="fa-solid fa-envelope text-[15px] mt-1.5"></i>
+                            <a href="mailto:thanhnam290596@gmail.com" class="text-[15px] font-roboto-mono italic hover:text-primary-color hover:underline hover:underline-offset-4">thanhnam290596@gmail.com</a>
+                        </div>
+                        <div class="socials-link flex space-x-3 mt-6">
+                            <a href="#" title="Facebook"><i class="fa-brands fa-facebook-f flex items-center justify-center w-9 h-9 rounded-full bg-[#3B5998] text-white text-base"></i></a>
+                            <a href="#" title="Twitter"><i class="fa-brands fa-twitter flex items-center justify-center w-9 h-9 rounded-full bg-[#00ACEE] text-white text-base"></i></a>
+                            <a href="#" title="Instagram"><i class="fa-brands fa-instagram flex items-center justify-center w-9 h-9 rounded-full bg-[#D53982] text-white text-lg"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-slate-800">
+            <div class="container py-4">
+                <div class="grid grid-cols-2">
+                    <div class="flex items-center">
+                        <p class="text-[16px] text-white">© RAFCART - All Rights Reserved</p>
+                    </div>
+                    <div>
+                        <img src="./public/images/products/payment-method.png" class="w-[333px] float-right h-7 object-contain" alt="Image payment-method">
+                    </div>
+                </div>  
+            </div>
+        </div>
+    </footer>
+    <!-- Footer end -->
+
+</body>
+</html>
