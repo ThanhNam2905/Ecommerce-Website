@@ -26,11 +26,15 @@ module.exports = {
         },
         extend: {
             fontFamily: {
-                roboto: "'Roboto', sans-serif;",
-                'roboto-mono': "'Roboto Mono', monospace;"
+                'roboto': "'Roboto', sans-serif;",
+                'roboto-mono': "'Roboto Mono', monospace;",
+                'poppins': "'Poppins', sans-serif;",
             },
             colors: {
                 'primary-color': '#FD3D57'
+            },
+            boxShadow: {
+                'custom': '0px 0px 16px rgb(0 0 0 / 6%)',
             }
         },
     },
@@ -38,9 +42,11 @@ module.exports = {
         extend: {
             display: ["group-hover"],
             visibility: ['group-hover'],
+            transform: ["group-focus"]
         },
     },
     plugins: [
         require('@tailwindcss/forms'),
+        require('@tailwindcss/line-clamp'),
     ],
 }
