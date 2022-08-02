@@ -4,6 +4,7 @@
 
 /* Google Font Poppins  */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @layer base {
     * {
@@ -16,6 +17,12 @@
 
     h1,h2,h3,h4,h5,h6 {
         @apply font-serif;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
     }
 }
 
@@ -91,7 +98,6 @@
         @apply  border-primary-color text-primary-color;
     }
 
-
     .tab__body-content {
         @apply  absolute -top-[110%] opacity-0 mt-2 transform scale-75 transition-all ease-in-out duration-500;
     }
@@ -100,4 +106,47 @@
         @apply  opacity-100 top-0 scale-100 mt-6;
     }
 
+    /* Select box */
+    .select-box .option-container {
+        @apply  absolute top-[107%] left-0 border border-gray-300 text-sm rounded-md shadow-custom w-full bg-white
+                invisible;
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .select-box .option-container.active {
+        @apply  visible max-h-64 overflow-y-scroll transition-all duration-500;
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    .select-box .option-container::-webkit-scrollbar {
+        @apply  w-[7px] bg-stone-300  rounded-lg;
+    }
+
+    .select-box .option-container::-webkit-scrollbar-thumb {
+        @apply bg-primary-color rounded;
+    }
+
+    .select-box .option-container.active + .selected i {
+        @apply  transform rotate-180 text-primary-color;
+    }
+
+    .select-box .option-container.active + .selected {
+        @apply  bg-gray-100;
+    }
+
+    .select-box .option.select-option-item label {
+        @apply  text-primary-color font-bold;
+    }
+
+    .select-box .option.select-option-item {
+        @apply  bg-gray-100;
+    }
+
+    .select-box .option.select-option-item label {
+        @apply  text-primary-color font-bold;
+    }
+
+    .select-box .option.select-option-item {
+        @apply  bg-gray-100;
+    }
 }
