@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Information Page</title>
+    <title>Manage Address Page</title>
     
     <link rel="shortcut icon" href="./public/images/favicon-tailwindcss.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
@@ -61,7 +61,7 @@
             <div class="flex items-center space-x-3 text-white py-5 px-10 bg-primary-color relative group">
                 <i class="fa-solid fa-bars text-base"></i>
                 <span class="text-[17px] font-normal capitalize">All categories</span>
-                <div class="absolute -left-3 w-full top-full bg-white shadow-md rounded-bl-md rounded-br-md py-4 divide-y-[1px] divide-dashed divide-gray-300 opacity-0 group-hover:opacity-100 transition ease-linear duration-500 invisible group-hover:visible">
+                <div class="absolute -left-3 w-full top-full bg-white shadow-md rounded-bl-md rounded-br-md py-4 divide-y-[1px] divide-dashed divide-gray-300 opacity-0 group-hover:opacity-100 transition-all ease-in duration-200 invisible group-hover:visible">
                     <a href="#" class="flex items-center space-x-8 px-5 py-3 hover:bg-gray-200">
                         <i class="fa-solid fa-couch text-pink-400 text-lg w-6"></i>
                         <span class=" text-gray-600 text-[15px]">Sofa</span>
@@ -125,11 +125,11 @@
         <span>
             <i class="fa-solid fa-angle-right text-[13px] text-gray-400"></i>
         </span>
-        <p class="text-gray-600 font-medium text-base">Profile Information</p>
+        <p class="text-gray-600 font-medium text-base">Manage Address</p>
     </div>
     <!-- Breadcrums end -->
 
-    <!-- Profile Information start -->
+    <!-- Manage Address start -->
     <main>
         <div class="container grid grid-cols-12 gap-5 pb-16 mt-3">
             <!-- sidebar -->
@@ -150,10 +150,10 @@
                             <h5 class="text-lg font-roboto font-semibold group-hover:text-primary-color">Manager my account</h5>
                         </a>
                         <a href="profile-information.html" class="capitalize text-base pl-7 flex items-center gap-x-2.5">
-                            <h5 class="font-roboto text-primary-color">Profile Information</h5>
+                            <h5 class="font-roboto hover:text-primary-color">Profile Information</h5>
                         </a>
                         <a href="manage-address.html" class="capitalize text-base pl-7 flex items-center gap-x-2.5">
-                            <h5 class="font-roboto hover:text-primary-color">Manage Address</h5>
+                            <h5 class="font-roboto text-primary-color">Manage Address</h5>
                         </a>
                         <a href="change-password.html" class="capitalize text-base pl-7 flex items-center gap-x-2.5">
                             <h5 class="font-roboto hover:text-primary-color">Change Password</h5>
@@ -164,7 +164,7 @@
                             <i class="fa-solid fa-gift text-lg -ml-7 inline-block group-hover:text-primary-color"></i>
                             <h5 class="text-lg font-roboto font-semibold group-hover:text-primary-color">My order history</h5>
                         </a>
-                        <a href="#" class="capitalize text-base pl-7 flex items-center gap-x-2.5">
+                        <a href="return-orders.html" class="capitalize text-base pl-7 flex items-center gap-x-2.5">
                             <h5 class="font-roboto hover:text-primary-color">My Returns</h5>
                         </a>
                         <a href="#" class="capitalize text-base pl-7 flex items-center gap-x-2.5">
@@ -175,7 +175,7 @@
                         </a>
                     </div>
                     <div class="space-y-1.5">
-                        <a href="#" class="capitalize pl-7 flex items-center gap-x-2.5 mt-3.5 group">
+                        <a href="payment-methods.html" class="capitalize pl-7 flex items-center gap-x-2.5 mt-3.5 group">
                             <i class="fa-regular fa-credit-card text-lg -ml-7 inline-block group-hover:text-primary-color"></i>
                             <h5 class="text-lg font-roboto font-semibold group-hover:text-primary-color">Payments methods</h5>
                         </a>
@@ -197,67 +197,216 @@
                     </div>
                 </div>
             </div>
-            <!-- profile information -->
+            <!-- manage address -->
             <div class="col-span-9">
                 <div class="bg-white shadow-custom px-6 pt-6 pb-9 rounded">
-                    <h5 class="font-semibold font-poppins text-lg capitalize">Profile Information</h5>
+                    <h5 class="font-semibold font-poppins text-lg capitalize">Manage Address</h5>
                     <div class="grid grid-cols-2 gap-6 mt-3.5">
                         <div class="space-y-2 mb-4">
-                            <label for="first-name" class="text-base font-medium capitalize">First name</label>
-                            <input type="text" name="" id="first-name" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color" placeholder="John">
+                            <label for="full-name" class="text-base font-medium capitalize">Full Name</label>
+                            <input type="text" name="" id="full-name" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color" value="John Joe">
                         </div>
                         <div class="space-y-2 mb-4">
-                            <label for="last-name" class="text-base font-medium capitalize">Last name</label>
-                            <input type="text" name="" id="last-name" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color"  placeholder="Joe">
+                            <label for="phone" class="text-base font-medium capitalize">Phone Number</label>
+                            <input type="number" name="" id="phone" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color" min="9" max="10"  value="0942898298">
                         </div>
                     </div>
                     <div class="grid grid-cols-2 gap-6 mt-2.5">
                         <div class="space-y-2 mb-4">
-                            <label for="birthday" class="text-base font-medium capitalize">Birthday</label>
-                            <input type="date" name="" id="my-birthday" value="01/08/2022" class="birthday-user cursor-pointer w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color">
-                        </div>
-                        <div class="space-y-2 mb-4">
-                            <label for="gender" class="text-base font-medium capitalize">Gender</label>
-                            
-                            <div class="select-box w-full relative">
+                            <label for="country" class="text-base font-medium capitalize">Country</label>
+                            <div class="select-country w-full relative">
                                 <ul class="option-container">
-                                    <div class="option hover:bg-gray-100 cursor-pointer px-4 py-3.5">
-                                        <input type="radio" name="" id="male" class="hidden">
-                                        <label for="male" class="cursor-pointer ">Male</label>
+                                    <div class="option-country hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="vietnamese" class="hidden">
+                                        <label for="vietnamese" class="cursor-pointer capitalize">Vietnamese</label>
                                     </div>
-                                    <div class="option hover:bg-gray-100 cursor-pointer px-4 py-3.5">
-                                        <input type="radio" name="" id="female" class="hidden">
-                                        <label for="female" class="cursor-pointer">Female</label>
+                                    <div class="option-country hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="thailand" class="hidden">
+                                        <label for="thailand" class="cursor-pointer capitalize">Thailand</label>
                                     </div>
-                                    <div class="option hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                    <div class="option-country hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="campuchia" class="hidden">
+                                        <label for="campuchia" class="cursor-pointer capitalize">Campuchia</label>
+                                    </div>
+                                    <div class="option-country hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="india" class="hidden">
+                                        <label for="india" class="cursor-pointer capitalize">India</label>
+                                    </div>
+                                    <div class="option-country hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="singapor" class="hidden">
+                                        <label for="singapor" class="cursor-pointer capitalize">Singapor</label>
+                                    </div>
+                                    <div class="option-country hover:bg-gray-100 cursor-pointer px-4 py-3.5">
                                         <input type="radio" name="" id="other" class="hidden">
-                                        <label for="other" class="cursor-pointer">Other</label>
+                                        <label for="other" class="cursor-pointer capitalize">Other</label>
                                     </div>
                                 </ul>
                                 <button class="selected order-1 w-full group border cursor-pointer border-gray-300 rounded px-4 py-3 text-sm hover:border-primary-color flex items-center justify-between">
-                                    <span>Male</span>
+                                    <span class="capitalize">Vietnamese</span>
+                                    <i class="fa-solid fa-chevron-down text-gray-400 text-base group-hover:text-gray-800"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="space-y-2 mb-4">
+                            <label for="city" class="text-base font-medium capitalize">City</label>
+                            <div class="select-city w-full relative">
+                                <ul class="option-container">
+                                    <div class="option-city hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="hochiminh" class="hidden">
+                                        <label for="hochiminh" class="cursor-pointer capitalize">ho chi minh</label>
+                                    </div>
+                                    <div class="option-city hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="hanoi" class="hidden">
+                                        <label for="hanoi" class="cursor-pointer capitalize">ha noi</label>
+                                    </div>
+                                    <div class="option-city hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="danang" class="hidden">
+                                        <label for="danang" class="cursor-pointer capitalize">da nang</label>
+                                    </div>
+                                    <div class="option-city hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="longan" class="hidden">
+                                        <label for="longan" class="cursor-pointer capitalize">long an</label>
+                                    </div>
+                                    <div class="option-city hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="cantho" class="hidden">
+                                        <label for="cantho" class="cursor-pointer capitalize">can tho</label>
+                                    </div>
+                                    <div class="option-city hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="other" class="hidden">
+                                        <label for="other" class="cursor-pointer capitalize">Other</label>
+                                    </div>
+                                </ul>
+                                <button class="selected order-1 w-full group border cursor-pointer border-gray-300 rounded px-4 py-3 text-sm hover:border-primary-color flex items-center justify-between">
+                                    <span class="capitalize">ho chi minh</span>
                                     <i class="fa-solid fa-chevron-down text-gray-400 text-base group-hover:text-gray-800"></i>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    
                     <div class="grid grid-cols-2 gap-6 mt-2.5">
                         <div class="space-y-2 mb-4">
-                            <label for="email" class="text-base font-medium capitalize">Email Address</label>
-                            <input type="email" name="" id="email" disabled="disabled" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color disabled:bg-gray-200"  placeholder="example@mail.com">
+                            <label for="district" class="text-base font-medium capitalize">Districts</label>
+                            <div class="select-district w-full relative">
+                                <ul class="option-container">
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="quan1" class="hidden">
+                                        <label for="quan1" class="cursor-pointer capitalize">quan 1</label>
+                                    </div>
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="quan2" class="hidden">
+                                        <label for="quan2" class="cursor-pointer capitalize">quan 2</label>
+                                    </div>
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="quan3" class="hidden">
+                                        <label for="quan3" class="cursor-pointer capitalize">quan 3</label>
+                                    </div>
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="quan4" class="hidden">
+                                        <label for="quan4" class="cursor-pointer capitalize">quan 4</label>
+                                    </div>
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="quan5" class="hidden">
+                                        <label for="quan5" class="cursor-pointer capitalize">quan 5</label>
+                                    </div>
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="quan6" class="hidden">
+                                        <label for="quan6" class="cursor-pointer capitalize">quan 6</label>
+                                    </div>
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="quan7" class="hidden">
+                                        <label for="quan7" class="cursor-pointer capitalize">quan 7</label>
+                                    </div>
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="quan8" class="hidden">
+                                        <label for="quan8" class="cursor-pointer capitalize">quan 8</label>
+                                    </div>
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="quan9" class="hidden">
+                                        <label for="quan9" class="cursor-pointer capitalize">quan 9</label>
+                                    </div>
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="quan10" class="hidden">
+                                        <label for="quan10" class="cursor-pointer capitalize">quan 10</label>
+                                    </div>
+                                    <div class="option-district hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="other" class="hidden">
+                                        <label for="other" class="cursor-pointer capitalize">other</label>
+                                    </div>
+                                </ul>
+                                <button class="selected order-1 w-full group border cursor-pointer border-gray-300 rounded px-4 py-3 text-sm hover:border-primary-color flex items-center justify-between">
+                                    <span class="capitalize">quan 6</span>
+                                    <i class="fa-solid fa-chevron-down text-gray-400 text-base group-hover:text-gray-800"></i>
+                                </button>
+                            </div>
                         </div>
                         <div class="space-y-2 mb-4">
-                            <label for="numberphone" class="text-base font-medium capitalize">Phone Number</label>
-                            <input type="text" name="" id="numberphone" disabled="disabled" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color disabled:bg-gray-200"  placeholder="123 456-789">
+                            <label for="ward" class="text-base font-medium capitalize">Wards</label>
+                            <div class="select-ward w-full relative">
+                                <ul class="option-container">
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="phuong1" class="hidden">
+                                        <label for="phuong1" class="cursor-pointer capitalize">phuong 1</label>
+                                    </div>
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="phuong2" class="hidden">
+                                        <label for="phuong2" class="cursor-pointer capitalize">phuong 2</label>
+                                    </div>
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="phuong3" class="hidden">
+                                        <label for="phuong3" class="cursor-pointer capitalize">phuong 3</label>
+                                    </div>
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="phuong4" class="hidden">
+                                        <label for="phuong4" class="cursor-pointer capitalize">phuong 4</label>
+                                    </div>
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="phuong5" class="hidden">
+                                        <label for="phuong5" class="cursor-pointer capitalize">phuong 5</label>
+                                    </div>
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="phuong6" class="hidden">
+                                        <label for="phuong6" class="cursor-pointer capitalize">phuong 6</label>
+                                    </div>
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="phuong7" class="hidden">
+                                        <label for="phuong7" class="cursor-pointer capitalize">phuong 7</label>
+                                    </div>
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="phuong8" class="hidden">
+                                        <label for="phuong8" class="cursor-pointer capitalize">phuong 8</label>
+                                    </div>
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="phuong9" class="hidden">
+                                        <label for="phuong9" class="cursor-pointer capitalize">phuong 9</label>
+                                    </div>
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="phuong10" class="hidden">
+                                        <label for="phuong10" class="cursor-pointer capitalize">phuong 10</label>
+                                    </div>
+                                    <div class="option-ward hover:bg-gray-100 cursor-pointer px-4 py-3.5">
+                                        <input type="radio" name="" id="other" class="hidden">
+                                        <label for="other" class="cursor-pointer capitalize">Other</label>
+                                    </div>
+                                </ul>
+                                <button class="selected order-1 w-full group border cursor-pointer border-gray-300 rounded px-4 py-3 text-sm hover:border-primary-color flex items-center justify-between">
+                                    <span class="capitalize">phuong 7</span>
+                                    <i class="fa-solid fa-chevron-down text-gray-400 text-base group-hover:text-gray-800"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <button class="btn--addCart w-auto px-6 py-2.5 text-[15px] mt-3">Save changes</button>
+                    <div class="w-full mt-3.5">
+                        <div class="space-y-2 mb-4">
+                            <label for="address" class="text-base font-medium capitalize">Address</label>
+                            <input type="text" name="" id="address" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color" value="25 Pham Ngu Lao,Ward 2, District 1, Ho Chi Minh City">
+                        </div>
+                    </div>
+                    <button class="btn--addCart w-auto px-6 py-2.5 text-[15px] mt-8">Save changes</button>
                 </div>
             </div>
         </div>
     </main>
-    <!-- Profile Information end -->
+    <!-- Manage Address end -->
 
     <!-- Footer start -->
     <footer>
@@ -353,6 +502,6 @@
     <!-- Footer end -->
 
     <!-- link src main.js  -->
-    <script src="./public/js/main.js" type="text/javascript"></script>
+    <script src="./public/js/manage-address.js" type="text/javascript"></script>
 </body>
 </html>
