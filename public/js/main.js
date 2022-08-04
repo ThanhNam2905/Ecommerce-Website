@@ -22,11 +22,11 @@ if(day < 10) day = "0" + day;
 
 document.querySelector("#my-birthday").value = '2022-07-31';
 
-// Select box 
-const selected = document.querySelector(".select-box .selected");
-const selectedInnerHTML = document.querySelector(".select-box .selected span");
-const optionsContainer = document.querySelector(".select-box .option-container");
-const optionsList = document.querySelectorAll(".select-box .option-container .option");
+// Select box gender 
+const selected = document.querySelector(".selected");
+const selectedInnerHTML = document.querySelector(".selected span");
+const optionsContainer = document.querySelector(".option-container");
+const optionsList = document.querySelectorAll(".option-container .option");
 
 selected.addEventListener(("click"), () => {
     optionsContainer.classList.toggle("active");

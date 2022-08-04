@@ -8,7 +8,7 @@
 
 @layer base {
     * {
-        @apply transition-all ease-in-out duration-300;
+        @apply transition ease-in-out duration-[400];
     }
 
     body {
@@ -29,27 +29,27 @@
 @layer components {
     /* Classes Button */
     .btn--shopnow {
-        @apply  py-4 px-7 border border-primary-color rounded-md bg-primary-color text-white uppercase font-semibold
+        @apply  py-4 px-7 border border-primary-color rounded-md bg-primary-color text-white uppercase font-semibold duration-500
                 hover:bg-transparent hover:text-primary-color;
     }
 
     .btn--addCart {
-        @apply  w-full pt-2 pb-1.5 mt-0.5 flex items-center text-base justify-center gap-x-3 border border-primary-color rounded bg-primary-color text-white uppercase font-medium
+        @apply  w-full pt-2 pb-1.5 mt-0.5 flex items-center text-base justify-center gap-x-3 border border-primary-color rounded bg-primary-color text-white uppercase font-medium  duration-500
                 hover:bg-transparent hover:text-primary-color;
     }
 
     .btn--wishlist {
-        @apply  w-full pt-2 pb-1.5 mt-0.5 flex items-center text-base justify-center gap-x-3 border border-primary-color rounded bg-white text-primary-color uppercase font-medium
+        @apply  w-full pt-2 pb-1.5 mt-0.5 flex items-center text-base justify-center gap-x-3 border border-primary-color rounded bg-white text-primary-color uppercase font-medium duration-500
                 hover:bg-primary-color hover:text-white;
     }
 
     .btn--subscribe {
-        @apply  px-2.5 py-2 text-[15.5px] border border-primary-color rounded-tr rounded-br bg-primary-color text-white uppercase font-medium
+        @apply  px-2.5 py-2 text-[15.5px] border border-primary-color rounded-tr rounded-br bg-primary-color text-white uppercase font-medium duration-500
                 hover:bg-transparent hover:text-primary-color;
     }
 
     .btn--search, .btn--heart {
-        @apply   cursor-pointer w-11 h-11 text-xl flex items-center justify-center rounded-full bg-primary-color text-white 
+        @apply   cursor-pointer w-11 h-11 text-xl flex items-center justify-center rounded-full bg-primary-color text-white  duration-500
                 hover:bg-gray-800;
     }
 
@@ -107,46 +107,87 @@
     }
 
     /* Select box */
-    .select-box .option-container {
-        @apply  absolute top-[107%] left-0 border border-gray-300 text-sm rounded-md shadow-custom w-full bg-white
+    .select-box .option-container,
+    .select-country .option-container,
+    .select-city .option-container,
+    .select-district .option-container,
+    .select-ward .option-container {
+        @apply  absolute top-[107%] left-0 z-20 border border-gray-300 text-sm rounded-md shadow-custom w-full bg-white
                 invisible;
                 clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     }
 
-    .select-box .option-container.active {
-        @apply  visible max-h-64 overflow-y-scroll transition-all duration-500;
+    .select-box .option-container.active,
+    .select-country .option-container.active,
+    .select-city .option-container.active,
+    .select-district .option-container.active,
+    .select-ward .option-container.active {
+        @apply  visible max-h-56 overflow-y-scroll transition-all duration-500;
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
 
-    .select-box .option-container::-webkit-scrollbar {
+    .select-box .option-container::-webkit-scrollbar,
+    .select-country .option-container::-webkit-scrollbar,
+    .select-city .option-container::-webkit-scrollbar,
+    .select-district .option-container::-webkit-scrollbar,
+    .select-ward .option-container::-webkit-scrollbar {
         @apply  w-[7px] bg-stone-300  rounded-lg;
     }
 
-    .select-box .option-container::-webkit-scrollbar-thumb {
+    .select-box .option-container::-webkit-scrollbar-thumb,
+    .select-country .option-container::-webkit-scrollbar-thumb,
+    .select-city .option-container::-webkit-scrollbar-thumb,
+    .select-district .option-container::-webkit-scrollbar-thumb,
+    .select-ward .option-container::-webkit-scrollbar-thumb {
         @apply bg-primary-color rounded;
     }
 
-    .select-box .option-container.active + .selected i {
+    .select-box .option-container.active + .selected i,
+    .select-country .option-container.active + .selected i,
+    .select-city .option-container.active + .selected i,
+    .select-district .option-container.active + .selected i,
+    .select-ward .option-container.active + .selected i {
         @apply  transform rotate-180 text-primary-color;
     }
 
-    .select-box .option-container.active + .selected {
+    .select-box .option-container.active + .selected,
+    .select-country .option-container.active + .selected,
+    .select-city .option-container.active + .selected,
+    .select-district .option-container.active + .selected,
+    .select-ward .option-container.active + .selected {
         @apply  bg-gray-100;
     }
 
-    .select-box .option.select-option-item label {
+    .select-box .option.select-option-item label,
+    .select-country .option-country.select-option-item label,
+    .select-city .option-city.select-option-item label,
+    .select-district .option-district.select-option-item label,
+    .select-ward .option-ward.select-option-item label {
         @apply  text-primary-color font-bold;
     }
 
-    .select-box .option.select-option-item {
+    .select-box .option.select-option-item,
+    .select-country .option-country.select-option-item,
+    .select-city .option-city.select-option-item,
+    .select-district .option-district.select-option-item,
+    .select-ward .option-ward.select-option-item {
         @apply  bg-gray-100;
     }
 
-    .select-box .option.select-option-item label {
+    .select-box .option.select-option-item label,
+    .select-country .option-country.select-option-item label,
+    .select-city .option-city.select-option-item label,
+    .select-district .option-district.select-option-item label,
+    .select-ward .option-ward.select-option-item label {
         @apply  text-primary-color font-bold;
+        
     }
 
-    .select-box .option.select-option-item {
+    .select-box .option.select-option-item,
+    .select-country .option-country.select-option-item,
+    .select-city .option-city.select-option-item,
+    .select-district .option-district.select-option-item,
+    .select-ward .option-ward.select-option-item {
         @apply  bg-gray-100;
     }
 }

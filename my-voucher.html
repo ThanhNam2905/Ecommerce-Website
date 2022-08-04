@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Information Page</title>
+    <title>My Voucher Page</title>
     
     <link rel="shortcut icon" href="./public/images/favicon-tailwindcss.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
@@ -125,11 +125,11 @@
         <span>
             <i class="fa-solid fa-angle-right text-[13px] text-gray-400"></i>
         </span>
-        <p class="text-gray-600 font-medium text-base">Profile Information</p>
+        <p class="text-gray-600 font-medium text-base">Edit Payment Method</p>
     </div>
     <!-- Breadcrums end -->
 
-    <!-- Profile Information start -->
+    <!-- My Voucher start -->
     <main>
         <div class="container grid grid-cols-12 gap-5 pb-16 mt-3">
             <!-- sidebar -->
@@ -150,7 +150,7 @@
                             <h5 class="text-lg font-roboto font-semibold group-hover:text-primary-color">Manager my account</h5>
                         </a>
                         <a href="profile-information.html" class="capitalize text-base pl-7 flex items-center gap-x-2.5">
-                            <h5 class="font-roboto text-primary-color">Profile Information</h5>
+                            <h5 class="font-roboto hover:text-primary-color">Profile Information</h5>
                         </a>
                         <a href="manage-address.html" class="capitalize text-base pl-7 flex items-center gap-x-2.5">
                             <h5 class="font-roboto hover:text-primary-color">Manage Address</h5>
@@ -175,12 +175,12 @@
                         </a>
                     </div>
                     <div class="space-y-1.5">
-                        <a href="#" class="capitalize pl-7 flex items-center gap-x-2.5 mt-3.5 group">
+                        <a href="payment-methods.html" class="capitalize pl-7 flex items-center gap-x-2.5 mt-3.5 group">
                             <i class="fa-regular fa-credit-card text-lg -ml-7 inline-block group-hover:text-primary-color"></i>
                             <h5 class="text-lg font-roboto font-semibold group-hover:text-primary-color">Payments methods</h5>
                         </a>
                         <a href="my-voucher.html" class="capitalize text-base pl-7 flex items-center gap-x-2.5">
-                            <h5 class="font-roboto hover:text-primary-color">Voucher</h5>
+                            <h5 class="font-roboto text-primary-color">Voucher</h5>
                         </a>
                     </div>
                     <div class="space-y-1.5">
@@ -197,67 +197,18 @@
                     </div>
                 </div>
             </div>
-            <!-- profile information -->
+            <!-- my-voucher -->
             <div class="col-span-9">
-                <div class="bg-white shadow-custom px-6 pt-6 pb-9 rounded">
-                    <h5 class="font-semibold font-poppins text-lg capitalize">Profile Information</h5>
-                    <div class="grid grid-cols-2 gap-6 mt-3.5">
-                        <div class="space-y-2 mb-4">
-                            <label for="first-name" class="text-base font-medium capitalize">First name</label>
-                            <input type="text" name="" id="first-name" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color" placeholder="John">
-                        </div>
-                        <div class="space-y-2 mb-4">
-                            <label for="last-name" class="text-base font-medium capitalize">Last name</label>
-                            <input type="text" name="" id="last-name" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color"  placeholder="Joe">
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 gap-6 mt-2.5">
-                        <div class="space-y-2 mb-4">
-                            <label for="birthday" class="text-base font-medium capitalize">Birthday</label>
-                            <input type="date" name="" id="my-birthday" value="01/08/2022" class="birthday-user cursor-pointer w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color">
-                        </div>
-                        <div class="space-y-2 mb-4">
-                            <label for="gender" class="text-base font-medium capitalize">Gender</label>
-                            
-                            <div class="select-box w-full relative">
-                                <ul class="option-container">
-                                    <div class="option hover:bg-gray-100 cursor-pointer px-4 py-3.5">
-                                        <input type="radio" name="" id="male" class="hidden">
-                                        <label for="male" class="cursor-pointer ">Male</label>
-                                    </div>
-                                    <div class="option hover:bg-gray-100 cursor-pointer px-4 py-3.5">
-                                        <input type="radio" name="" id="female" class="hidden">
-                                        <label for="female" class="cursor-pointer">Female</label>
-                                    </div>
-                                    <div class="option hover:bg-gray-100 cursor-pointer px-4 py-3.5">
-                                        <input type="radio" name="" id="other" class="hidden">
-                                        <label for="other" class="cursor-pointer">Other</label>
-                                    </div>
-                                </ul>
-                                <button class="selected order-1 w-full group border cursor-pointer border-gray-300 rounded px-4 py-3 text-sm hover:border-primary-color flex items-center justify-between">
-                                    <span>Male</span>
-                                    <i class="fa-solid fa-chevron-down text-gray-400 text-base group-hover:text-gray-800"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="grid grid-cols-2 gap-6 mt-2.5">
-                        <div class="space-y-2 mb-4">
-                            <label for="email" class="text-base font-medium capitalize">Email Address</label>
-                            <input type="email" name="" id="email" disabled="disabled" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color disabled:bg-gray-200"  placeholder="example@mail.com">
-                        </div>
-                        <div class="space-y-2 mb-4">
-                            <label for="numberphone" class="text-base font-medium capitalize">Phone Number</label>
-                            <input type="text" name="" id="numberphone" disabled="disabled" class="w-full border border-gray-300 rounded px-4 py-3 text-sm placeholder-gray-800 focus:outline-none focus:border-primary-color focus:ring-primary-color disabled:bg-gray-200"  placeholder="123 456-789">
-                        </div>
-                    </div>
-                    <button class="btn--addCart w-auto px-6 py-2.5 text-[15px] mt-3">Save changes</button>
+                <div class="bg-white shadow-custom px-6 pt-6 pb-9 rounded h-[410px]">
+                    <h5 class="font-semibold font-poppins text-lg capitalize">My Voucher</h5>
+                    <p class="text-sm font-poppins mt-2.5 italic text-gray-500">
+                        There are no vouchers yet
+                    </p>
                 </div>
             </div>
         </div>
     </main>
-    <!-- Profile Information end -->
+    <!-- My Voucher end -->
 
     <!-- Footer start -->
     <footer>
